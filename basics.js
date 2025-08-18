@@ -12,3 +12,5 @@ Math.round(2.8)
 // type of 
 typeof 'hello'
 // 
+// or
+(|| && && )
