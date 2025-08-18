@@ -14,3 +14,12 @@ typeof 'hello'
 // 
 // or
 (|| && && )
+// falsy value 
+0 null undefined Nan ''
+NaN = 'text' * 4
+// short cut for if statement
+const result = true ? 'efsdgrw' : console.log('sdgsger');
+
+const message = false && 'hello';
+console.log(message);
+
