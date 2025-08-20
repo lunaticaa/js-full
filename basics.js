@@ -44,5 +44,10 @@ const pro = {
 
 console.log(pro.name);
 
+// delete one property
+delete pro.newPropperty;
+console.log(pro);
+
+
 
 
