@@ -36,3 +36,13 @@ calc(2000 , 3)
 calc(2244) 
 
 
+
+const pro = {
+  name: "svsfdv",
+  price: 13245
+}
+
+console.log(pro.name);
+
+
+
