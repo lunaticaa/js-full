@@ -23,3 +23,16 @@ const result = true ? 'efsdgrw' : console.log('sdgsger');
 const message = false && 'hello';
 console.log(message);
 
+const currency = 'EUR' || 'USD';
+
+
+// default value for mul
+function calc(prameter1, mul = 4){
+  console.log(prameter1 * mul);
+  
+}
+
+calc(2000 , 3)
+calc(2244) 
+
+
