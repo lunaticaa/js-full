@@ -22,13 +22,18 @@
       play('scissores')
     ">Scissors</button>
     <button onclick="
-      score.wins: 0,
-      score.losses: 0,
-      score.ties: 0
+      localStorage.removeItem('score')
     ">Reset score</button>
     <script>
       const score = JSON.parse(localStorage.getItem("score"))
       
+      if(score === null){
+        score = {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        }
+      }
       function play(playerMove){
         const computerMove = pickOne();
         let result = '';
