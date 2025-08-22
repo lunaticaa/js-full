@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const products = {
+        name: "shirt",
+        // nested object
+        rating: {
+          star: 4,
+          pro: 5,
+        },
+        // funcrtions are also type of value
+        func: function function2() {
+          console.log("ffrgrrwfhuf98fwe98f");
+        },
+      };
+      // if it doesn't exist it will get error
+      console.log(products.name);
+      // if it doesn't exist it won't get error
+      console.log(products["name"]);
+      products.func();
+      // js to JSON
+      const jsonString = JSON.stringify(products);
+      // JSON to js
+      console.log(JSON.parse(jsonString)); 
+    </script>
+  </body>
+</html>
