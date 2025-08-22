@@ -31,8 +31,8 @@
         wins: 0,
         losses: 0,
         ties: 0
-
       }
+      console.log(localStorage.getItem(message));
       function play(playerMove){
         const computerMove = pickOne();
         let result = '';
@@ -66,8 +66,8 @@
             else if(computerMove === 'scissors'){
               result = 'you won'
             }
-            
-            
+            // setItem for local storage
+            localStorage.setItem('message', 'hello')
             alert(`you pick Rock .computer pick ${computerMove} . ${result}`);
         }
 
