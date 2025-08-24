@@ -48,3 +48,25 @@
 console.log("hello".length);
 console.log("hello".toUpperCase());
 console.log("hello".toLowerCase());
+
+const object1 = {
+  message: "hello",
+};
+
+const object2 = object1;
+
+object1.message = "good job";
+
+console.log(object1);
+console.log(object2);
+const object3 = { message: "good job" };
+console.log(object3 === object1);
+console.log(object2 === object1);
+// as same
+const object4 = {
+  message: "sfbbsf",
+};
+// const message = object4.message;
+const { message } = object4;
+// log
+console.log(message);
