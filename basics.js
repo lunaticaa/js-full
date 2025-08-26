@@ -65,8 +65,24 @@ console.log(object2 === object1);
 // as same
 const object4 = {
   message: "sfbbsf",
+  price: 34234,
 };
 // const message = object4.message;
-const { message } = object4;
+const { message, price } = object4;
 // log
 console.log(message);
+console.log(price);
+const object5 = {
+  message,
+  // method: function func1() {
+  //   console.log("method");
+  // }
+  method(){
+    console.log('method');
+    
+  }
+  ,
+};
+//  same as 4
+console.log(object5);
+object5.method;

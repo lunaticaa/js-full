@@ -25,15 +25,20 @@
       localStorage.removeItem('score')
     ">Reset score</button>
     <script>
-      const score = JSON.parse(localStorage.getItem("score"))
-      
-      if(score === null){
+      const score = JSON.parse(localStorage.getItem("score")) || {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        }
+      /*
+      if(!score){
         score = {
           wins: 0,
           losses: 0,
           ties: 0
         }
       }
+      */
       function play(playerMove){
         const computerMove = pickOne();
         let result = '';
