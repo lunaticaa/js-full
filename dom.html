@@ -7,16 +7,23 @@
   </head>
   <body>
     <button>hello</button>
+    <button class="btn2">hello world!</button>
     <script>
-      /*
-      document.body.innerHTML = "hello";
-      document.title = "ggod goob";
-      */
-      console.log(document.title);
-      document.title = "srrtwrt";
-      console.log(document.body);
-      console.log(document.body.innerHTML);
-      document.body.innerHTML = `<button>hello</button>`
+      // htmls are js objects
+      // first select
+      document.querySelector("button");
+      document.querySelector("button").innerHTML = "changed";
+      const btnElem = document.querySelector(".btn2");
+      btnElem.innerHTML = "changed2!";
+      // /*
+      // document.body.innerHTML = "hello";
+      // document.title = "ggod goob";
+      // */
+      // console.log(document.title);
+      // document.title = "srrtwrt";
+      // console.log(document.body);
+      // console.log(document.body.innerHTML);
+      // document.body.innerHTML = `<button>hello</button>`
     </script>
   </body>
 </html>
