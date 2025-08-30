@@ -8,7 +8,26 @@
   <body>
     <p>youtube subscription</p>
     <button onclick="sub()" class="yt-btn">subscribe</button>
+    <p>Amazon shipping calculator</p>
+    <input type="text" placeholder="cost of order" class="cost-input" onkeydown="console.log(event.key)";
+    "/>
+    <button
+      onclick="
+    Calculator()
+    "
+    >
+      Calc
+    </button>
+    <p class="js-total"></p>
     <script>
+      function Calculator() {
+        const inputElm = document.querySelector(".cost-input");
+        const cost = Number(inputElm.value);
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total").innerHTML = `${cost}`;
+      }
       function sub() {
         const btnYt = document.querySelector(".yt-btn");
         // innerText same as innerHTML but without space
