@@ -9,8 +9,14 @@
     <p>youtube subscription</p>
     <button onclick="sub()" class="yt-btn">subscribe</button>
     <p>Amazon shipping calculator</p>
-    <input type="text" placeholder="cost of order" class="cost-input" onkeydown="console.log(event.key)";
-    "/>
+    <input
+      type="text"
+      placeholder="cost of order"
+      class="cost-input"
+      onkeydown=" handleCost(event)
+
+    "
+    />
     <button
       onclick="
     Calculator()
@@ -20,6 +26,19 @@
     </button>
     <p class="js-total"></p>
     <script>
+      String(34);
+      console.log("25" - 5);
+      console.log("25" + 5);
+      // window is built in
+      window.document;
+      window.console.log("window");
+      Window.alert;
+
+      function handleCost(event) {
+        if (event.key === "Enter") {
+          Calculator();
+        }
+      }
       function Calculator() {
         const inputElm = document.querySelector(".cost-input");
         const cost = Number(inputElm.value);
