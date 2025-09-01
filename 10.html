@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .sub-button {
+        border: none;
+        background-color: black;
+        color: white;
+        border-radius: 50px;
+        padding: 10px 15px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .is-subed {
+        background-color: rgb(176, 176, 176);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>youtube subscription</p>
+    <button class="yt-btn sub-button" onclick="sub()" class="yt-btn">
+      subscribe
+    </button>
+    <p>Amazon shipping calculator</p>
+    <input
+      type="text"
+      placeholder="cost of order"
+      class="cost-input"
+      onkeydown=" handleCost(event)
+
+    "
+    />
+    <button
+      onclick="
+    Calculator()
+    "
+    >
+      Calc
+    </button>
+    <p class="js-total"></p>
+    <script>
+      String(34);
+      console.log("25" - 5);
+      console.log("25" + 5);
+      // window is built in
+      window.document;
+      window.console.log("window");
+      Window.alert;
+
+      function handleCost(event) {
+        if (event.key === "Enter") {
+          Calculator();
+        }
+      }
+      function Calculator() {
+        const inputElm = document.querySelector(".cost-input");
+        const cost = Number(inputElm.value);
+        if (cost < 40) {
+          cost = cost + 10;
+        }
+        document.querySelector(".js-total").innerHTML = `${cost}`;
+      }
+      function sub() {
+        const btnYt = document.querySelector(".yt-btn");
+        // innerText same as innerHTML but without space
+
+        if (btnYt.innerText === "subscribe") {
+          btnYt.innerHTML = "subscribed";
+          btnYt.classList.add("is-subed");
+        } else {
+          btnYt.innerHTML = "subscribe";
+          btnYt.classList.remove("is-subed");
+        }
+      }
+    </script>
+  </body>
+</html>
